@@ -4,6 +4,7 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
   const [name, setName] = useState('');
+  const [userName, setUserName] = useState('');
 
   const handleSubmit = (e) => {
       e.preventDefault();
@@ -17,6 +18,9 @@ const SignUp = () => {
       <form className="register-form" onSubmit={handleSubmit}>
           <label htmlFor="name"> Full name: </label>
           <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Full Name" />
+          <br></br><br></br>
+          <label htmlFor="userName"> User name: </label>
+          <input value={userName} name="name" onChange={(e) => setUserName(e.target.value)} id="name" placeholder="User Name" />
           <br></br><br></br>
           <label htmlFor="email"> Email: </label>
           <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
