@@ -4,7 +4,7 @@ const LandingPage = () => {
 
     return (
         <div>
-            landing page
+            Landing page
         </div>
     );
 };
