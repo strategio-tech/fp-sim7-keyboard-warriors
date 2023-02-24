@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}
+
+.auth-form-container, .register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+  .auth-form-container {
+    align-items: center;
+    padding: 30rem;
+    border-radius: 10px;
+    position: absolute;
+ 
+
+  }
+  
+  .auth-form-container::before {
+    content: "";
+    background-image: url("./images/background.jpg");
+    background-size:cover;
+    margin: 0;
+    padding: 0;
+    background-position:center center;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.55
+
+  }
+  .logo{
+
+
+  }
+  
+  h2 {
+    position: absolute;
+    width: 219px;
+    height: 75px;
+    top: 158px;
+    text-align: center;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    color: #014E58;
+
+  }
+
+  .login-form, .signup-form {
+    align-items: center;
+    width: 500px;
+    min-height: 600px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10%;
+    background-color : #014E58;
+    color : #fff;
+    position: relative;
+    }
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  display: block;
+  padding: 1rem;
+  border: none;
+  background: #EDFEFF;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background-color: pink;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #00FF19;
+}
+
+
+.log-in-btn{
+font-weight: bold;
+margin: auto;
+display: block;
+padding: 24px 48px;
+background: #EDFEFF;
+border-radius: 60px;
+color: #05260A;
+}
+
+.link-next{
+ 
+  text-align: center;
+
+}

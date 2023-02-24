@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
@@ -11,18 +12,23 @@ const Login = () => {
   }
 
   return (
+    
       <div className="auth-form-container">
-          <h2>Login</h2><br></br>
+          <h2>Login</h2>
+          
           <form className="login-form" onSubmit={handleSubmit}>
-              <label htmlFor="email"> Email:  </label> 
-              <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+          <br></br><br></br>
+              <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="User Name" id="email" name="email" />
               <br></br><br></br>
-              <label htmlFor="password"> Password: </label>
-              <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+             
+              <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />
+              
               <br></br><br></br>
-              <button type="submit">Log In</button><br></br>
+              <div className="link-next"><a href="/signup"  >Don't have an account? Sign up here. </a></div>
+          
+          <br></br><br></br>
+              <button className="log-in-btn" type="submit">Log In</button>
           </form>
-          <a href="/signup">Don't have an account? Sign up here.</a>
       </div>
   )
 }
