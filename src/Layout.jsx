@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import LandingPage from "./Views/LandingPage";
 import Login from "./Views/Login";
-import NoPage from "./Views/NoPage";
 import SignUp from "./Views/SignUp";
 import UserProfile from "./Views/UserProfile";
 import VideoPage from "./Views/VideoPage";
@@ -20,8 +19,7 @@ const Layout = () => {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/watch" element={<VideoPage />} />
                 <Route path="/upload" element={<VideoUpload />} />
-                <Route path="/profile" element={<UserProfile />} />
-                <Route path="*" element={<NoPage />} />
+                <Route path="/profile" element={<UserProfile />} />             
             </Routes>
         </BrowserRouter>
     );
