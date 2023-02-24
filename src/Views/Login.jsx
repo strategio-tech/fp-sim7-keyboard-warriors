@@ -15,25 +15,26 @@ const Login = () => {
 
   const formStyle={
     textAlign: 'center', 
-    width: '500px',
     minHeight: '600px',
     borderRadius: '5px',
     boxSizing: 'border-box',
-    padding: '10%',
+    padding: '5%',
     backgroundColor : '#014E58',
-    position: 'absolute'
+    display:'flex',
+    flexDirection:'column'
   }
 
 
   return (
   
-      //<div className="auth-form-container">
-        <div className="d-flex justify-content-center align-items-center" style={{backgroundSize: 'cover' ,position:'absolute'}}>
+    <div className="d-flex justify-content-center align-items-center" style={{backgroundSize: 'cover', height:'100vh'}}>
         
-            <img src={backimage} alt="" style={{ width: '100%', opacity:' 0.55 ' }}  />
-             <h1 style={{textAlign: 'center',padding: '10%', color:'#014E58', position: 'absolute', top: '58px',fontFamily: 'Raleway',fontWeight: '700',fontSize: '64px'}}>Login</h1>
-          
-          <form onSubmit={handleSubmit} style={formStyle}>
+    <img src={backimage} alt="" style={{ objectFit:'cover', height: '100%', width: '100%', opacity:' 0.55 ', position:'absolute',zIndex:'-500'}}  />
+    <div className="col-12 d-flex flex-column align-items-center" >
+     <h1 style={{textAlign: 'center',padding: '10%', color:'#014E58', top: '58px',fontFamily: 'Raleway',fontWeight: '700',fontSize: '48px'}}>Log In</h1>
+  
+      <form className="col-12 col-sm-7 col-md-5" onSubmit={handleSubmit} style={formStyle}>
+    
          
               <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="User Name" id="email" name="email" />
               
@@ -48,7 +49,7 @@ const Login = () => {
               
           </form>
       </div>
-
+      </div>
   )
 }
 
