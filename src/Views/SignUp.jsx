@@ -1,4 +1,7 @@
-import React , { useState } from 'react'
+import React, { useState } from "react";
+import { Button } from 'react-bootstrap';
+import backimage from '../assets/background.jpg'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -11,27 +14,41 @@ const SignUp = () => {
       console.log(email);
       console.log(name);
   }
+  const formStyle={
+    textAlign: 'center', 
+    width: '500px',
+    minHeight: '600px',
+    borderRadius: '5px',
+    boxSizing: 'border-box',
+    padding: '5%',
+    backgroundColor : '#014E58',
+    position: 'absolute'
+  }
 
   return (
-      <div className="auth-form-container">
-          <h2>Sign Up</h2><br></br>
-      <form className="signup-form" onSubmit={handleSubmit}>
+    <div className="d-flex justify-content-center align-items-center" style={{backgroundSize: 'cover' ,position:'absolute'}}>
+        
+    <img src={backimage} alt="" style={{ width: '100%', opacity:' 0.55 ' }}  />
+     <h1 style={{textAlign: 'center',padding: '10%', color:'#014E58', position: 'absolute', top: '58px',fontFamily: 'Raleway',fontWeight: '700',fontSize: '64px'}}>Sign Up</h1>
+  
+      <form onSubmit={handleSubmit} style={formStyle}>
     
           <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Full Name" />
-          <br></br><br></br>
+          
           
           <input value={userName} name="name" onChange={(e) => setUserName(e.target.value)} id="name" placeholder="User Name" />
-          <br></br><br></br>
+          
          
           <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="Email" id="email" name="email" />
-          <br></br><br></br>
+          
          
           <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />
-          <br></br><br></br>
+          
           <div className="link-next" >
           <a href="/login">Already have an account? Login here.</a>
-          </div><br></br><br></br>
-          <button className="log-in-btn" type="submit">Submit</button>
+          </div>
+          <Button size="lg" style={{marginTop: '10%',borderRadius: '60px', background:'#EDFEFF', color:'#05260A', padding: '10px 48px',fontWeight:'bold', margin: 'auto',display: 'block'}}>Submit</Button>
+         
       </form>
       
   </div>
