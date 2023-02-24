@@ -56,17 +56,6 @@
 
   }
 
-  .login-form, .signup-form {
-    align-items: center;
-    width: 500px;
-    min-height: 600px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 10%;
-    background-color : #014E58;
-    color : #fff;
-    position: relative;
-    }
 
 label {
   text-align: left;
