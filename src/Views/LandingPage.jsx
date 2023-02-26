@@ -1,9 +1,33 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import lplogo from '../assets/landing-page-image.png'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col, Form } from 'react-bootstrap';
 
 const LandingPage = () => {
+
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  }
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log(fullName, email, message);
+    setFullName('');
+    setEmail('');
+    setMessage('');
+  }
 
     return (
         <div className="d-flex justify-content-center align-items-center" 
@@ -31,17 +55,44 @@ const LandingPage = () => {
                     <p>Join our yoga community today and start exploring the endless possibilities of your practice. Let's connect, learn, and grow together.</p>
                     
                     <p style={{textAlign:'center'}}>Namaste.</p>
-
-                    <div style={{background: '#014E58', color: 'white', padding: '1rem', textAlign: 'center'}}>
-                        <div style={{height:'363px',paddingLeft:'114px', paddingRight:'110px',paddingTop:'40px'}}>
-                            <div style={{ textAlign:'left', fontSize:'32px' }}>
-                                <span style={{display: 'inline-block', color:'#00FF19'}}>Serenity</span>
-                                <span style={{display: 'inline-block'}}>Stream</span> 
-                            </div>
-                            <span style={{textAlign:'left', marginRight:'20rem',}}>Your yoga stream platform of excellence.</span>
-                        </div>    
-                    </div> 
                 </div>
+
+                <Container style={{background: '#014E58', color: 'white', padding: '1rem', textAlign: 'center'}}>
+                    <Row>
+                        <Col>
+                            <h3 style={{textAlign:'left'}}>
+                                <span style={{color: '#00FF19'}}>Serenity</span>Stream
+                            </h3>
+                            <p style={{textAlign:'left'}}>Your yoga stream platform of excellence.</p>
+                        </Col>
+                        <Col>
+                          <h3>Contact</h3>
+                            <form>
+                                <div className="mb-3">
+                                <label htmlFor="full-name" className="form-label">
+                                    Full Name
+                                </label>
+                                <input type="text" className="form-control" id="full-name" />
+                                </div>
+                                <div className="mb-3">
+                                <label htmlFor="email" className="form-label">
+                                    Email Address
+                                </label>
+                                <input type="email" className="form-control" id="email" />
+                                </div>
+                                <div className="mb-3">
+                                <label htmlFor="message" className="form-label">
+                                    Message
+                                </label>
+                                <textarea className="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <button type="submit" className="btn btn-primary">
+                                Send
+                                </button>
+                            </form>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     );
