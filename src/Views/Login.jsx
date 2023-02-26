@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(email);
+      console.log(userName);
       console.log(password);
   }
 
@@ -37,11 +37,11 @@ const Login = () => {
                     <input data-testid="userName" value={userName} onChange={(e) => setUserName(e.target.value)}type="userName" placeholder="User Name" id="userName" name="userName" />
                     <input data-testid="password" value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />              
                     <div className="link-next"><a href="/signup"  >Don't have an account? Sign up here. </a></div>         
-                    <Button size="lg" style={{marginTop: '20%',borderRadius: '60px', background:'#EDFEFF', color:'#05260A', padding: '10px 48px',fontWeight:'bold', margin: 'auto',display: 'block'}}>Log In</Button>
+                    <Button type="submit" size="lg" style={{marginTop: '20%',borderRadius: '60px', background:'#EDFEFF', color:'#05260A', padding: '10px 48px',fontWeight:'bold', margin: 'auto',display: 'block'}}>Log In</Button>
                 
                 </form>
             </div>
-    </div>
+ </div>
   )
 }
 

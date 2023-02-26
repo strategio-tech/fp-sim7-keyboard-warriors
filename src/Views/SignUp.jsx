@@ -4,15 +4,18 @@ import backimage from '../assets/background.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPass] = useState('');
   const [name, setName] = useState('');
   const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPass] = useState('');
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(email);
       console.log(name);
+      console.log(userName);
+      console.log(email);
+      console.log(password);
+      
   }
   const formStyle={
     textAlign: 'center', 
@@ -39,7 +42,7 @@ const SignUp = () => {
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="Email" id="email" name="email" />
             <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />       
             <div className="link-next" ><a href="/login">Already have an account? Login here.</a></div>
-            <Button size="lg" style={{marginTop: '20%',borderRadius: '60px', background:'#EDFEFF', color:'#05260A', padding: '10px 48px',fontWeight:'bold', margin: 'auto',display: 'block'}}>Submit</Button>
+            <Button type="submit" size="lg" style={{marginTop: '20%',borderRadius: '60px', background:'#EDFEFF', color:'#05260A', padding: '10px 48px',fontWeight:'bold', margin: 'auto',display: 'block'}}>Submit</Button>
           
           </form>
       </div>
