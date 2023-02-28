@@ -69,26 +69,33 @@ const LandingPage = () => {
                           <h3>Contact</h3>
                             <form>
                                 <div className="mb-3">
-                                <label htmlFor="full-name" className="form-label">
-                                    Full Name
-                                </label>
-                                <input type="text" className="form-control" id="full-name" />
+                                    <label htmlFor="full-name" className="form-label d-flex justify-content-start">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text" className="form-control" id="full-name" />
                                 </div>
+
                                 <div className="mb-3">
-                                <label htmlFor="email" className="form-label">
-                                    Email Address
-                                </label>
-                                <input type="email" className="form-control" id="email" />
+                                    <label htmlFor="email" className="form-label d-flex justify-content-start">
+                                        Email Address
+                                    </label>
+
+                                    <input type="email" className="form-control" id="email" />
                                 </div>
+
                                 <div className="mb-3">
-                                <label htmlFor="message" className="form-label">
-                                    Message
-                                </label>
-                                <textarea className="form-control" id="message" rows="3"></textarea>
+                                    <label htmlFor="message" className="form-label d-flex justify-content-start">
+                                        Message
+                                    </label>
+
+                                    <textarea className="form-control" id="message" rows="3"></textarea>
                                 </div>
-                                <button type="submit" className="btn btn-primary">
+
+                                <button type="submit" className="btn btn-primary" style={{width:'415px'}}>
                                 Send
                                 </button>
+                                
                             </form>
                         </Col>
                     </Row>
