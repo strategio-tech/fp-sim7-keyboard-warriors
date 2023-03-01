@@ -87,6 +87,10 @@ label {
 
 }
 
+input[type="radio"]{
+    margin-top:0;
+}
+
 button {
   border: none;
   background-color: pink;
