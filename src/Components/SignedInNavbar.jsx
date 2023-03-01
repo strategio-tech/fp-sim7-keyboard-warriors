@@ -30,38 +30,40 @@ const SignedInNav = () => {
                         />
                     </Navbar.Brand>
 
-                    <Nav className="mr-auto">
+                    <Nav className="d-flex gap-4 align-items-center">
                         {loggedIn ? (
                             <>
-                                <Nav.Link
-                                    href="/"
-                                    className="text-dark font-weight-bold c-nav-link"
+                                <Link
+                                    to="/home"
+                                    className="text-dark fw-bold c-nav-link"
                                 >
                                     Home
-                                </Nav.Link>
-                                <Nav.Link
-                                    href="#videos"
+                                </Link>
+                                <Link
+                                    to="/feed"
                                     className="text-dark c-nav-link"
                                 >
                                     Videos
-                                </Nav.Link>
+                                </Link>
 
-                                <Nav.Link href="/">
+                                <Link to="/">
                                     <img
                                         src={addVideoImage}
                                         height="30"
                                         className=""
                                         alt="Add"
                                     />
-                                </Nav.Link>
+                                </Link>
 
                                 <NavDropdown
+                                    
+                                    align="end"
                                     title={
                                         <img
                                             src={profileImage}
                                             height="30"
                                             width="30"
-                                            className="rounded-circle mr-2"
+                                            className="rounded-circle mr-2 align-self-center"
                                             alt="Profile"
                                         />
                                     }
