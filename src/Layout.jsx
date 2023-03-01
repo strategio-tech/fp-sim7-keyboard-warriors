@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import SignedInNav from "./Components/SignedInNavbar";
 import LandingPage from "./Views/LandingPage";
 import Login from "./Views/Login";
 import SignUp from "./Views/SignUp";
@@ -11,16 +12,15 @@ import './Layout.css';
 const Layout = () => {
     return (
         <BrowserRouter>
-            <Navbar/>
+            {/* <Navbar/> */}
+            <SignedInNav/>
             <Routes>
                 <Route index element={<LandingPage />} />
                 <Route path="/home" element={<LandingPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/watch" element={<VideoPage />} />
-                <Route path="/upload" element={<VideoUpload />} />
                 <Route path="/profile" element={<UserProfile />} />
-                <Route path="*" element={<NoPage />} />
             </Routes>
         </BrowserRouter>
     );
