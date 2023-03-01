@@ -11,10 +11,10 @@
       <ul>
         <li><a href="#features">Features</a></li>
         <li><a href="#tools">Tools</a></li>
-        <li><a href="#architecture-diagram">Architecture Diagram</a></li>
+        <li><a href="#architecture-diagram">Architecture Diagrams</a></li>
       </ul>
     </li>
-    <li><a href="#local-installation">Getting Started</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#backend-repo">Back-End Repository</a></li> 
     <li><a href="#web-deployment">Web Deployment</a></li> 
     <li><a href="#end-points">End Points</a></li> 
@@ -31,9 +31,8 @@
 
 ## Features:
  - User authentication and authorization
- - Video upload and management
- - Video browsing and searching by level, duration, or style
- - Personalized playlist creation
+ - Video watching and upload 
+ - Video browsing and searching by difficulty, category, or title
  - Rating and commenting on videos
  - Community engagement and connection
 
@@ -52,7 +51,7 @@
 - Test: 
     - Jest, Pytest
 - Release: 
-    - Github Workflows, 
+    - Github Workflows 
 - Deploy and Monitor: 
     - Docker, AWS EC2
 
@@ -63,7 +62,7 @@
 
  <div id="architecture-diagram">
 
-## Architecture Diagram
+## Architecture Diagrams
 
 ### Sign up architecture
 ![alt text](/src/assets/signup.png)
@@ -84,7 +83,7 @@
 
 </div>
 
-<div id="local-installation">
+<div id="getting-started">
 
 ## Getting Started
 
@@ -104,7 +103,6 @@ PORT=<your port number>
 AWS_REGION=<your AWS region>
 AWS_ACCESS_KEY_ID=<your AWS access key ID>
 AWS_SECRET_ACCESS_KEY=<your AWS secret access key>
-DYNAMODB_TABLE_NAME=<your DynamoDB table name>
 ```
 
 Start the server by running the following command in the server directory:
@@ -177,11 +175,10 @@ To set up your own CI/CD pipeline, you will need to follow these general steps:
 <div id="upcoming features" >
 
 ## Upcoming Features:
- - Video upload and management
- - Video browsing and searching by level, duration, or style
+ - Video watching and upload 
+ - Video browsing and searching by difficulty, category, or title
  - Personalized playlist creation
  - Rating and commenting on videos
- - Community engagement and connection
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
