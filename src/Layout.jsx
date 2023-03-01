@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import Navbar from "./Components/Navbar";
 import SignedInNav from "./Components/SignedInNavbar";
 import LandingPage from "./Views/LandingPage";
 import Login from "./Views/Login";
