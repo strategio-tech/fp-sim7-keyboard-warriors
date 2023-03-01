@@ -16,7 +16,6 @@ const Layout = () => {
    
     return (
         <BrowserRouter>
-            {/* <Navbar/> */}
             <SignedInNav/>
             <Routes>
                 <Route index element={<LandingPage />} />
