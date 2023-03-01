@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import SignedInNav from "./Components/SignedInNavbar";
 import LandingPage from "./Views/LandingPage";
 import Login from "./Views/Login";
-import NoPage from "./Views/NoPage";
 import SignUp from "./Views/SignUp";
 import VideoFeed from "./Views/VideoFeed"
 import UserProfile from "./Views/UserProfile";
@@ -16,7 +16,8 @@ const Layout = () => {
    
     return (
         <BrowserRouter>
-            <Navbar/>
+            {/* <Navbar/> */}
+            <SignedInNav/>
             <Routes>
                 <Route index element={<LandingPage />} />
                 <Route path="/home" element={<LandingPage />} />
@@ -25,7 +26,6 @@ const Layout = () => {
                 <Route path="/feed" element={<VideoFeed />} />
                 <Route path="/watch" element={<VideoPage />} />
                 <Route path="/profile" element={<UserProfile />} />
-                <Route path="*" element={<NoPage />} />
             </Routes>
         </BrowserRouter>
     );

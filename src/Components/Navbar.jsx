@@ -15,6 +15,7 @@ const CustomNavbar = () => {
               width="100"
               className="d-inline-block align-top"
               alt="Serenity Logo"
+
             />
           </Navbar.Brand>
           
