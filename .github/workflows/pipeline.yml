@@ -32,8 +32,11 @@ jobs:
     
   test:
 
+    needs:
+      build
+      
     runs-on: ubuntu-latest
-    
+      
     strategy:
       matrix:
         node-version: [14.x]
