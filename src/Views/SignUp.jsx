@@ -65,7 +65,7 @@ const SignUp = () => {
             .then((res) => {
                 if (res.data.ResponseMetadata.HTTPStatusCode == "200") {
                     alert("Congratulation! You are signed up", res);
-                    navigate("/feed");
+                    navigate("/login");
                 }
             })
             .catch((err) => {
