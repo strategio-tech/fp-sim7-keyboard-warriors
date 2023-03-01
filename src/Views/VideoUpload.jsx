@@ -4,15 +4,20 @@ import TextField from '@mui/material/TextField';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
-function VideoUpload() {
+import { useNavigate } from "react-router";
+
+function VideoUpload({setloggedIn}) {
     const { register, handleSubmit } = useForm();
     const [title, setTitle] = useState("");
     const [videoFile, setVideoFile] = useState([])
+
+    let navigate = useNavigate()
+
     const onSubmit = async (data) => {
                 
         const formData = new FormData();
-        formData.append("videoFile", data.file[0].name);
-        formData.append("title", title);
+        formData.append("videoFile", data.file[0]);
+        formData.append("videoTitle", title);
         console.log(formData)
         
         const res = await axios.post(
@@ -20,7 +25,7 @@ function VideoUpload() {
             formData,
             {
                 headers: {
-                    // "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Origin": "*",
                     "content-type": "multipart/form-data",
                     Authorization:
                     "Bearer " + localStorage.getItem("token"),
@@ -36,7 +41,15 @@ function VideoUpload() {
             // setVideoURL(data.videoURL);
             // setImgURL(data.imgURL);
         })
-        .catch((error) => console.error(error));
+        .catch((error) => {
+            if(error.response && error.response.data == "Invalid session!"){
+                localStorage.removeItem("token")
+                setloggedIn(false)
+                navigate("/home")
+            }
+
+            console.log(error);
+        });
     }
         return (
         <div>

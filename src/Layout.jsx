@@ -7,15 +7,16 @@ import VideoFeed from "./Views/VideoFeed"
 import UserProfile from "./Views/UserProfile";
 import VideoPage from "./Views/VideoPage";
 import './Layout.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import VideoUpload from "./Views/VideoUpload"
 
 const Layout = () => {
+    const [loggedIn, setloggedIn] = useState(false);
 
    
     return (
         <BrowserRouter>
-            <SignedInNav/>
+            <SignedInNav loggedIn={loggedIn} setloggedIn={setloggedIn}/>
             <Routes>
                 <Route index element={<LandingPage />} />
                 <Route path="/home" element={<LandingPage />} />
@@ -24,7 +25,7 @@ const Layout = () => {
                 <Route path="/feed" element={<VideoFeed />} />
                 <Route path="/watch" element={<VideoPage />} />
                 <Route path="/profile" element={<UserProfile />} />
-                <Route path="/upload" element={<VideoUpload />} />
+                <Route path="/upload" element={<VideoUpload setloggedIn={setloggedIn} />} />
             </Routes>
         </BrowserRouter>
     );

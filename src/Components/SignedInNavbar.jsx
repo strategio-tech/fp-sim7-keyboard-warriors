@@ -5,8 +5,7 @@ import serenity from "../assets/Yoga-Logo.png";
 import profileImage from "../assets/Luuh.jpg";
 import addVideoImage from "../assets/addVideo.png";
 
-const SignedInNav = () => {
-    const [loggedIn, setloggedIn] = useState(false);
+const SignedInNav = ({loggedIn, setloggedIn}) => {
     useEffect(() => {
         if (localStorage.getItem("token")) {
             setloggedIn(true);
