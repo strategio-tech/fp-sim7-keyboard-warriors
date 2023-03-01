@@ -15,7 +15,12 @@
       </ul>
     </li>
     <li><a href="#local-installation">Getting Started</a></li>
+    <li><a href="#backend-repo">Back-End Repository</a></li> 
     <li><a href="#web-deployment">Web Deployment</a></li> 
+    <li><a href="#end-points">End Points</a></li> 
+    <li><a href="#get-request">Get Requests</a></li> 
+    <li><a href="#post-request">Post Requests</a></li>
+    <li><a href="#upcoming-features">Upcoming Features</a></li> 
 	<li><a href="#authors">Authors</a></li>
   </ol>
 
@@ -33,6 +38,7 @@
  - Community engagement and connection
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
  <div id="tools">
 
 ### Tools
@@ -59,8 +65,20 @@
 
 ## Architecture Diagram
 
-### How to upload a video architecture
-![alt text](/src/assets/uploadVideoArch.png)
+### Sign up architecture
+![alt text](/src/assets/signup.png)
+
+### Log in architecture
+![alt text](/src/assets/login.png)
+
+### Upload video architecture
+![alt text](/src/assets/upload.png)
+
+### Watch video architecture
+![alt text](/src/assets/watch.png)
+
+### Get video architecture
+![alt text](/src/assets/getVideo.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +117,15 @@ Start the client by running the following command in the client directory:
 ```shell
 npm start
 ```
-Open your web browser and navigate to http://127.0.0.1:5173/to access the app.
+Open your web browser and navigate to the link on your terminal to access the app.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+</div>
+
+<div id="backend-repo">
+
+## Back-End Repository
+See our back-end repo [here](https://github.com/UmiKami/serenitystream-backend).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
@@ -121,6 +147,43 @@ To set up your own CI/CD pipeline, you will need to follow these general steps:
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+</div>
+
+
+<div id="end-points">
+
+## End Points 
+...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+</div>
+
+<div id="get-request">
+
+## Get Requests 
+
+...
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+</div>
+
+<div id="post-request">
+
+## Post Requests  
+
+...
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+</div>
+
+<div id="upcoming features" >
+
+## Upcoming Features:
+ - Video upload and management
+ - Video browsing and searching by level, duration, or style
+ - Personalized playlist creation
+ - Rating and commenting on videos
+ - Community engagement and connection
+
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
 
 <div id="authors">
