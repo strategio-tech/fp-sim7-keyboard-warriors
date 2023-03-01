@@ -5,6 +5,7 @@ import VideoRating from "../Components/VideoRating";
 import axios from "axios";
 const INITIAL_HEIGHT = 46;
 import img from "../assets/landing-page-image.png"
+import { useParams } from "react-router-dom";
 
 const VideoPage = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,24 +14,32 @@ const VideoPage = () => {
 
   const [title, setTitle] = useState("");
   const [userName, setUserName] = useState("");
+  const [rating, setRating] = useState("");
   const [thumbnail, setThumbnail] = useState(img);
-  const [video, setVideo] = useState('');
-
+  const [video, setVideo] = useState("");
+  const [comments, setComments] = useState([]);
+  const {id} = useParams();
   const outerHeight = useRef(INITIAL_HEIGHT);
   const textRef = useRef(null);
   const containerRef = useRef(null);
-
+// const id = "1e9d07f7-7d3c-4e0a-acab-453d9cb089e2";
   useEffect(() => {
     const getVideoInfo = async () => {
       const response = await axios.get(
-        "https://api.serenitystream.tv/api/v2/videos/public"
+        // "https://api.serenitystream.tv/api/v2/videos/public"
+        `https://api.serenitystream.tv/api/v2/videos/${id}`
       );
-    //   console.log(response.data.Items[0]);
-      setTitle(response.data.Items[0].title.S);
-      setUserName(response.data.Items[0].username.S);
+
+
+    //   console.log(response.data.url.S);
+      setComments(response.data.comments.SS)
+      setTitle(response.data.title.S);
+      setUserName(response.data.username.S);
     //   setThumbnail(response.data.Items[0].thumbnails.L[0].S);
-        setVideo(response.data.Items[0].url.S);
-      setAddPlaylist([response.data.Items[0].id.S, title]);
+        setVideo(response.data.url.S);
+        setRating(response.data.rating.N);
+    //   setAddPlaylist([response.data.Items[0].id.S, title]);
+    // console.log(response)
     };
     getVideoInfo();
   }, []);

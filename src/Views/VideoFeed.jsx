@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import VideoPage from "./VideoPage";
 
 const VideoFeed = () => {
   const [searchInput, setSearchInput] = useState("");
+  const [allVideos, setAllVideos] = useState([]);
   const handleSearch = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
@@ -11,12 +13,16 @@ const VideoFeed = () => {
   useEffect(() => {
     const getVideoInfo = async () => {
       const response = await axios.get(
-        "https://api.serenitystream.tv/api/v2/videos/public "
+        "https://api.serenitystream.tv/api/v2/videos/public"
       );
-      console.log(response.data.Items[0]);
+      setAllVideos(response.data.Items);
+    //   console.log(response.data.Items);
     };
     getVideoInfo();
   }, []);
+  const id = "25d551be-5066-4fd2-96aa-2c3a2d4b9bcf";
+
+//   console.log(allVideos)
   return (
     <div>
       <h1>Videos</h1>
@@ -53,7 +59,18 @@ const VideoFeed = () => {
         </select>
       </div>
 
-      <div></div>
+      <div className ="d-flex flex-column">
+        {/* <Watch id={id}></Watch> */}
+        {/* <VideoPage id = {id}></VideoPage> */}
+        
+        {/* {allVideos} */}
+{    allVideos.map((video) =>{
+       return <Link to={`/watch/${video.id.S}`}>Test Link</Link>
+
+        // console.log()
+      })
+}
+      </div>
     </div>
   );
 };
