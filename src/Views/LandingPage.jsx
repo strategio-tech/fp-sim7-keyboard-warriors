@@ -1,6 +1,7 @@
 import { useState } from "react";
 import lplogo from '../assets/landing-page-image.png'
 import { Button, Container, Row, Col, Form } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
 
@@ -37,7 +38,7 @@ const LandingPage = () => {
 
                 <h1 style={{ textAlign: 'center', paddingRight: '20px',paddingTop: '20px', color:'#014E58', marginBottom:'2rem' }}>Yoga is the journey of the self,<br />through the self, to the self.</h1>
 
-                <Button size="md" style={{borderRadius: '60px', background:'#014E58', color:'#00FF19', marginLeft: '11rem'}}>Watch Now</Button>
+                <Button size="md" style={{borderRadius: '60px', background:'#014E58', color:'#00FF19', marginLeft: '11rem'}}><Link to = {"/feed"}>Watch Now</Link></Button>
 
                 <h1 style={{marginTop: '50px', textAlign: 'center', color:'#014E58'}}>About Us</h1>
 

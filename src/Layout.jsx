@@ -8,7 +8,7 @@ import UserProfile from "./Views/UserProfile";
 import VideoPage from "./Views/VideoPage";
 import './Layout.css';
 import { useEffect } from "react";
-
+import VideoUpload from "./Views/VideoUpload"
 
 const Layout = () => {
 
@@ -24,6 +24,7 @@ const Layout = () => {
                 <Route path="/feed" element={<VideoFeed />} />
                 <Route path="/watch" element={<VideoPage />} />
                 <Route path="/profile" element={<UserProfile />} />
+                <Route path="/upload" element={<VideoUpload />} />
             </Routes>
         </BrowserRouter>
     );
