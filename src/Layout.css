@@ -1,3 +1,7 @@
+/* *{
+  outline: 1px solid red;
+} */
+
 .App {
   text-align: center;
   display: flex;
@@ -76,7 +80,6 @@ input {
   text-align: center;
   align-self: center;
   margin: auto;
-  margin-top: 15%;
   padding: 1rem;
   border: none;
   background: #EDFEFF;
