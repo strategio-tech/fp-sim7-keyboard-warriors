@@ -112,6 +112,7 @@ Open your web browser and navigate to http://127.0.0.1:5173/to access the app.
 ![Front-End Pipeline](/src/assets/Front-End-Pipeline.png)
 
 ### Back-End Pipeline
+
 ![Back-End Pipeline](/src/assets/Back-End-Pipeline.png)
 
 To set up your own CI/CD pipeline, you will need to follow these general steps:
