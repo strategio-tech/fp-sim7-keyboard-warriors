@@ -76,14 +76,15 @@ label {
   padding: 0.25rem 0;
 }
 
-input {
+.gen-input {
   text-align: center;
   align-self: center;
-  margin: auto;
+  /* margin: auto; */
   padding: 1rem;
   border: none;
   background: #EDFEFF;
   border-radius: 10px;
+
 }
 
 button {

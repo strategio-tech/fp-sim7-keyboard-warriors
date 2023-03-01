@@ -77,7 +77,6 @@ const SignUp = () => {
         minHeight: "700px",
         borderRadius: "5px",
         boxSizing: "border-box",
-        // padding: "3%",
         backgroundColor: "#014E58",
         display: "flex",
         flexDirection: "column",
@@ -158,13 +157,14 @@ const SignUp = () => {
                 </h1>
 
                 <form
-                    className="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3"
+                    className="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-center"
                     onSubmit={handleSubmit}
                     style={formStyle}
                 >
                     <input
                         value={name}
                         name="name"
+                        className="gen-input"
                         onChange={(e) => setName(e.target.value)}
                         id="name"
                         placeholder="Full Name"
@@ -175,12 +175,14 @@ const SignUp = () => {
                         onChange={(e) => setUserName(e.target.value)}
                         id="userName"
                         placeholder="User Name"
+                        className="gen-input"
                     />
                     <input
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         placeholder="Email"
+                        className="gen-input"
                         id="email"
                         name="email"
                     />
@@ -189,6 +191,7 @@ const SignUp = () => {
                         onChange={(e) => setPass(e.target.value)}
                         type="password"
                         placeholder="Password"
+                        className="gen-input"
                         id="password"
                         name="password"
                     />
@@ -202,13 +205,11 @@ const SignUp = () => {
                             type="submit"
                             size="lg"
                             style={{
-                                marginTop: "20%",
                                 borderRadius: "60px",
                                 background: "#EDFEFF",
                                 color: "#05260A",
                                 padding: "10px 48px",
                                 fontWeight: "bold",
-                                margin: "auto",
                                 display: "block",
                             }}
                         >
