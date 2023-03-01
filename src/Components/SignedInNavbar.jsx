@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import serenity from "../assets/Yoga-Logo.png";
+import serenity from "../assets/logowithbackground.png";
 import profileImage from "../assets/Luuh.jpg";
 import addVideoImage from "../assets/addVideo.png";
 
@@ -20,13 +20,16 @@ const SignedInNav = ({loggedIn, setloggedIn}) => {
             <Navbar style={{ backgroundColor: "#EDFEFF" }} variant="dark">
                 <Container className="px-3">
                     <Navbar.Brand href="#home">
-                        <img
+                        <Link to={"/home"}> 
+                            <img
                             src={serenity}
                             height="70"
                             width="100"
                             className="d-inline-block align-top"
                             alt="Serenity Logo"
-                        />
+                            />
+                        </Link>
+                       
                     </Navbar.Brand>
 
                     <Nav className="mr-auto">
