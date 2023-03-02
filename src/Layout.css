@@ -1,6 +1,14 @@
 /* *{
   outline: 1px solid red;
 } */
+body,html{
+  margin: 0;
+  padding:0;
+
+}
+* {
+  box-sizing: border-box;
+}
 
 .App {
   text-align: center;
@@ -90,16 +98,6 @@ label {
 input[type="radio"]{
     margin-top:0;
 }
-
-button {
-  border: none;
-  background-color: pink;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #00FF19;
-}
-
 
 .log-in-btn{
 font-weight: bold;

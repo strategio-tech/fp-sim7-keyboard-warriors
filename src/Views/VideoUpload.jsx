@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import "../Layout.css";
+import lplogo from '../assets/uploadVideo.png'
 
 function VideoUpload({setloggedIn}) {
     const { register, handleSubmit } = useForm();
@@ -53,10 +55,16 @@ function VideoUpload({setloggedIn}) {
         });
     }
         return (
-        <div>
-            <p>Video Upload Page</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="file" {...register("file")} />
+        <div  className="d-flex justify-content-center align-items-start"
+        style={{ background: '#EDFEFF', height: "100vh",font:'Raleway' }}>
+    
+            <form className="flex-column col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-start" onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="chooseFile" >
+            <img className="flex-column justify-content-around align-items-start" src={lplogo} alt="" width="100%" height="100%"/>
+            </label> 
+     
+             <input id="chooseFile" type="file" style={{ display: 'none' }} {...register("file")} />   
+
                 <TextField
                     label="Title"
                     variant="outlined"
@@ -73,18 +81,18 @@ function VideoUpload({setloggedIn}) {
                             onChange={(e) => setVideoFile(e.target.files)}
                             
                         /> */}
-            <span className="border border-info" >
+            <span >
                 <h5>Difficulty</h5>
-                <input type="radio" value="beginner" id="beginner" />
-                <label htmlFor="beginner">Beginner</label>
-                <input type="radio"  value="intermediate" id="intermediate" />
-                <label htmlFor="intermediate">Intermediate</label>
-                <input type="radio"  value="advanced" id="advanced" />
-                <label htmlFor="advanced">Advanced</label>
+                <input type="radio" value="beginner" id="beginner" name="difficulty" />
+                <label htmlFor="beginner">&nbsp;Beginner &nbsp;&nbsp;</label> 
+                <input type="radio"  value="intermediate" id="intermediate" name="difficulty"/>
+                <label htmlFor="intermediate">&nbsp;Intermediate &nbsp;&nbsp;</label>
+                <input type="radio"  value="advanced" id="advanced" name="difficulty"/>
+                <label htmlFor="advanced">&nbsp;Advanced&nbsp;&nbsp;</label>
             </span>
 
             <h5>Category</h5>
-            <select>
+            <select style={{background: '#EDFEFF'}}>
                 <option value="ashtanga">Ashtanga yoga (eight-limbed yoga)</option>
                 <option value="hatha">Hatha yoga (force yoga)</option>
                 <option value="hot">Hot yoga (hot room yoga)</option>
@@ -93,12 +101,31 @@ function VideoUpload({setloggedIn}) {
                 <option value="power">Power yoga (build strength and endurance)</option>
                 <option value="restorative">Restorative yoga (relaxing, calming, and healing effects)</option>
                 <option value="vinyasa">Vinyasa yoga (flow yoga)</option>
-            </select>  
-               <button type ="submit"> <input type="submit" /></button>
-               
+            </select> 
+            <div className=" mt-4 col-12 d-flex justify-content-start gap-4 align-items-start">
+            <button type ="submit" size="md" 
+               style={{ borderRadius: "60px",
+                     background: "#014E58",
+                     color: "#00FF19",
+                      padding: "6px 30px",
+                      fontWeight: "bold",
+                      fontFamily:'Raleway'
+            }}> Submit </button>
+                   <button type ="" size="md" 
+                    style={{ borderRadius: "60px",
+                     background: "#014E58",
+                     color: "#00FF19",
+                      padding: "6px 30px",
+                      fontWeight: "bold",
+                      fontFamily:'Raleway'
+
+             }} ><Link to="/feed">Cancel</Link> </button>
+                </div> 
+
             </form>
-            <button type ="" ><Link to="/feed">Cancel</Link> </button>
+        
         </div>
+       
     )
 }
 
