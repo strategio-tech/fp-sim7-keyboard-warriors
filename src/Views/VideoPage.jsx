@@ -4,12 +4,14 @@ import Comments from "../Components/Comments";
 import VideoRating from "../Components/VideoRating";
 import axios from "axios";
 const INITIAL_HEIGHT = 46;
-import img from "../assets/landing-page-image.png"
+import img from "../assets/landing-page-image.png";
 import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const VideoPage = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [commentValue, setCommentValue] = useState("");
+
   const [addPlaylist, setAddPlaylist] = useState({});
 
   const [title, setTitle] = useState("");
@@ -18,33 +20,52 @@ const VideoPage = () => {
   const [thumbnail, setThumbnail] = useState(img);
   const [video, setVideo] = useState("");
   const [comments, setComments] = useState([]);
-  const {id} = useParams();
+  const { id } = useParams();
   const outerHeight = useRef(INITIAL_HEIGHT);
   const textRef = useRef(null);
   const containerRef = useRef(null);
-// const id = "1e9d07f7-7d3c-4e0a-acab-453d9cb089e2";
+
+  const onComment = async () => {
+    const res = await axios
+      .post(
+        `https://api.serenitystream.tv/api/v2/videos/${id}/comment`,
+        { comment: commentValue },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        }
+      )
+      .then((response) => {
+        let data = response.data;
+        console.log(data);
+      })
+      .catch((error) => {
+        if (error.response && error.response.data == "Invalid session!") {
+          localStorage.removeItem("token");
+          setloggedIn(false);
+          navigate("/home");
+        }
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
     const getVideoInfo = async () => {
       const response = await axios.get(
-        // "https://api.serenitystream.tv/api/v2/videos/public"
         `https://api.serenitystream.tv/api/v2/videos/${id}`
       );
-
-
-    //   console.log(response.data.url.S);
-      setComments(response.data.comments.SS)
+      //   console.log(response.data);
+      setComments(response.data.comments.SS);
       setTitle(response.data.title.S);
       setUserName(response.data.username.S);
-    //   setThumbnail(response.data.Items[0].thumbnails.L[0].S);
-        setVideo(response.data.url.S);
-        setRating(response.data.rating.N);
-    //   setAddPlaylist([response.data.Items[0].id.S, title]);
-    // console.log(response)
+      setVideo(response.data.url.S);
+      setRating(response.data.rating.N);
     };
     getVideoInfo();
   }, []);
 
-//   console.log(addPlaylist);
   const onExpand = () => {
     if (!isExpanded) {
       outerHeight.current = containerRef.current.scrollHeight;
@@ -65,32 +86,26 @@ const VideoPage = () => {
     e.preventDefault();
     console.log(e.target[0].value);
   };
-
   return (
     <div>
       <div className="container">
         <p>{title}</p>
-    
+
         <iframe
-      width="560"
-      height="315"
-      src={video}
-    //   title="Youtube Player"
-      frameborder="0"
-      allowFullScreen
-    />
+          width="560"
+          height="315"
+          src={video}
+          //   title="Youtube Player"
+          frameborder="0"
+          allowFullScreen
+        />
         <VideoRating></VideoRating>
         <span>
-        <button type="submit" >
-            
-            Add to Playlist
-            
-          </button>
+          <button type="submit">Add to Playlist</button>
 
-        <button type="submit" onClick={ () => onExpand()}>
+          <button type="submit" onClick={() => onExpand()}>
             Add Comment
           </button>
-
         </span>
       </div>
       <form
@@ -127,17 +142,25 @@ const VideoPage = () => {
           <button type="button" className="cancel" onClick={onClose}>
             Cancel
           </button>
-          <button type="submit" disabled={commentValue.length < 1}>
+          <button
+            type="submit"
+            disabled={commentValue.length < 1}
+            onClick={onComment}
+          >
             Post Comment
           </button>
         </div>
       </form>
       <div className="comment-container">
         Comments
-        <Comments userName={"Pepa Pig"} number={1}></Comments>
-        <Comments number={2}></Comments>
-        <Comments number={3}></Comments>
-        <Comments number={4}></Comments>
+        {comments.map((comment) => {
+          return (
+            <Comments
+              user={comment.username}
+              comment={comment.content}
+            ></Comments>
+          );
+        })}
       </div>
     </div>
   );
