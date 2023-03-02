@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import VideoPage from "./VideoPage";
+import VideoRating from "../Components/VideoRating";
 
 const VideoFeed = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -16,46 +16,88 @@ const VideoFeed = () => {
         "https://api.serenitystream.tv/api/v2/videos/public"
       );
       setAllVideos(response.data.Items);
-    //   console.log(response.data.Items);
     };
     getVideoInfo();
   }, []);
-  const id = "25d551be-5066-4fd2-96aa-2c3a2d4b9bcf";
-
-//   console.log(allVideos)
+  
   return (
-    <div className=" flex-column justify-content-start align-items-center"
-    style={{background:'#EDFEFF', display:'flex', height: "100vh", alignItems:'center'}}>
+    <div
+      className=" flex-column justify-content-start align-items-center"
+      style={{
+        background: "#EDFEFF",
+        display: "flex",
+        height: "100vh",
+        alignItems: "center",
+      }}
+    >
       <h1>Videos</h1>
-
-      <button type="submit" style={{borderRadius:'60px', background:'#014E58'}}>
-        <Link to="/upload" style={{color:'#00FF19', textDecoration:'none', fontFamily:'Raleway', fontWeight:'bold', padding: '6px 30px'}}>Upload Videos</Link>
-      </button> <br />
-
-      {/* <input type = "text">Search Bar</input> */}
-      
+      <button
+        type="submit"
+        style={{ borderRadius: "60px", background: "#014E58" }}
+      >
+        <Link
+          to="/upload"
+          style={{
+            color: "#00FF19",
+            textDecoration: "none",
+            fontFamily: "Raleway",
+            fontWeight: "bold",
+            padding: "6px 30px",
+          }}
+        >
+          Upload Videos
+        </Link>
+      </button>{" "}
+      <br />
       <input
-        style={{width:'600px'}}
+        style={{ width: "600px" }}
         type="text"
         placeholder="Search here"
         onChange={handleSearch}
         value={searchInput}
       />
-      <div className="border-info" style={{ marginTop: "10px", display: "flex", alignItems:'center' }}>
+      <div
+        className="border-info"
+        style={{ marginTop: "10px", display: "flex", alignItems: "center" }}
+      >
         <div style={{ marginRight: "20px" }}>
-          <span style={{ fontSize: "20px", marginRight: "5px" }}>Difficulty: </span>
-          <input type="radio" value="beginner" id="beginner" name="difficulty" style={{ marginRight: "3px" }}
+          <span style={{ fontSize: "20px", marginRight: "5px" }}>
+            Difficulty:{" "}
+          </span>
+          <input
+            type="radio"
+            value="beginner"
+            id="beginner"
+            name="difficulty"
+            style={{ marginRight: "3px" }}
           />
-          <label htmlFor="beginner" style={{ marginRight: "10px" }}>Beginner</label>
-          <input type="radio" value="intermediate" id="intermediate" name="difficulty" style={{ marginRight: "3px" }}/>
-          <label htmlFor="intermediate" style={{ marginRight: "10px" }}>Intermediate</label>
-          <input type="radio" value="advanced" id="advanced" name="difficulty" style={{ marginRight: "3px" }}
+          <label htmlFor="beginner" style={{ marginRight: "10px" }}>
+            Beginner
+          </label>
+          <input
+            type="radio"
+            value="intermediate"
+            id="intermediate"
+            name="difficulty"
+            style={{ marginRight: "3px" }}
+          />
+          <label htmlFor="intermediate" style={{ marginRight: "10px" }}>
+            Intermediate
+          </label>
+          <input
+            type="radio"
+            value="advanced"
+            id="advanced"
+            name="difficulty"
+            style={{ marginRight: "3px" }}
           />
           <label htmlFor="advanced">Advanced</label>
         </div>
 
-        <div style={{height:'42px'}}>
-          <span style={{ fontSize: "20px", marginRight: "9px"}}>Category:</span>
+        <div style={{ height: "42px" }}>
+          <span style={{ fontSize: "20px", marginRight: "9px" }}>
+            Category:
+          </span>
           <select style={{ marginTop: "10px" }}>
             <option value="ashtanga">Ashtanga</option>
             <option value="hatha">Hatha</option>
@@ -68,19 +110,20 @@ const VideoFeed = () => {
           </select>
         </div>
       </div>
-
-      <div className ="d-flex flex-column">
-        {/* <Watch id={id}></Watch> */}
-        {/* <VideoPage id = {id}></VideoPage> */}
-        
-        {/* {allVideos} */}
-        {    
-                allVideos.map((video) =>{
-                  return <Link to={`/watch/${video.id.S}`}>Test Link</Link>
-
-                    // console.log()
-                  })
-        }
+      <div className="d-flex flex-column">
+        {allVideos.map((video) => {
+          return (
+            <div className="square border">
+              <img src="src/assets/landing-page-image.png" />
+              <Link to={`/watch/${video.id.S}`}>Test Link</Link>
+              <VideoRating></VideoRating>
+              <p>
+                Dui proin mauris neque vulputate morbi quis et semper. Dui
+                tortor risus amet congue hendrerit integer.
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
