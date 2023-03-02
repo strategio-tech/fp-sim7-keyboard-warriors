@@ -99,7 +99,7 @@ const VideoPage = () => {
           frameborder="0"
           allowFullScreen
         />
-        <VideoRating></VideoRating>
+        <VideoRating id={id}></VideoRating>
         <span>
           <button type="submit">Add to Playlist</button>
 
