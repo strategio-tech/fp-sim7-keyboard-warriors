@@ -49,7 +49,7 @@ const SignedInNav = ({loggedIn, setloggedIn}) => {
                                     Videos
                                 </Nav.Link>
 
-                                <Nav.Link href="/">
+                                <Nav.Link href="/upload">
                                     <img
                                         src={addVideoImage}
                                         height="30"

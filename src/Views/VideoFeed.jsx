@@ -58,8 +58,8 @@ const VideoFeed = () => {
       />
       <div
         className="border-info"
-        style={{ marginTop: "10px", display: "flex", alignItems: "center" }}
-      >
+        style={{ marginTop: "10px", display: "flex", alignItems: "center", marginBottom: "1rem" }}>
+      
         <div style={{ marginRight: "20px" }}>
           <span style={{ fontSize: "20px", marginRight: "5px" }}>
             Difficulty:{" "}
@@ -113,13 +113,13 @@ const VideoFeed = () => {
       <div className="d-flex flex-column">
         {allVideos.map((video) => {
           return (
-            <div className="square border">
-              <img src="src/assets/landing-page-image.png" />
-              <Link to={`/watch/${video.id.S}`}>Test Link</Link>
+            <div className="square">
+              <Link to={`/watch/${video.id.S}`}><img src="src/assets/thumbnail.jpg" style={{height:'20em'}} /></Link><br />
+              <Link to={`/watch/${video.id.S}`}>Yoga Title</Link>
               <VideoRating></VideoRating>
-              <p>
+              <p style={{marginBottom:'3rem'}}>
                 Dui proin mauris neque vulputate morbi quis et semper. Dui
-                tortor risus amet congue hendrerit integer.
+                tortor.
               </p>
             </div>
           );
