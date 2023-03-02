@@ -26,10 +26,13 @@ const VideoFeed = () => {
   return (
     <div style={{background:'#EDFEFF', display:'flex', alignItems:'center', flexDirection:'column'}}>
       <h1>Videos</h1>
-      <button type="submit" style={{borderRadius:'60px', background:'#014E58', color:'#00FF19'}}>
-        <Link to="/upload">Upload Videos</Link>
+
+      <button type="submit" style={{borderRadius:'60px', background:'#014E58'}}>
+        <Link to="/upload" style={{color:'#00FF19', textDecoration:'none', fontFamily:'Raleway', fontWeight:'bold', padding: '6px 30px'}}>Upload Videos</Link>
       </button> <br />
+
       {/* <input type = "text">Search Bar</input> */}
+      
       <input
         style={{width:'600px'}}
         type="text"
@@ -72,10 +75,10 @@ const VideoFeed = () => {
         {/* {allVideos} */}
         {    
                 allVideos.map((video) =>{
-              return <Link to={`/watch/${video.id.S}`}>Test Link</Link>
+                  return <Link to={`/watch/${video.id.S}`}>Test Link</Link>
 
-                // console.log()
-              })
+                    // console.log()
+                  })
         }
       </div>
     </div>
