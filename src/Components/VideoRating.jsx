@@ -2,6 +2,7 @@ import * as React from 'react';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
+import axios from 'axios';
 
 const labels = {
   0.5: 'Useless',
@@ -24,6 +25,15 @@ const VideoRating = () => {
   const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
 
+  axios.post(
+      `https://api.serenitystream.tv/api/v2/videos/1e9d07f7-7d3c-4e0a-acab-453d9cb089e2/rate/${Math.round(value)}`
+  ).then(res => {
+    let rating = Math.round(res.data.rating);
+    setValue(rating)
+  }).catch(err =>{
+    console.log(err);
+  })
+
   return (
     <Box
       sx={{
@@ -39,9 +49,6 @@ const VideoRating = () => {
         getLabelText={getLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);
-        }}
-        onChangeActive={(event, newHover) => {
-          setHover(newHover);
         }}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
       />
