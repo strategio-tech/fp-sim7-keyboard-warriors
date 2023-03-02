@@ -41,8 +41,9 @@ const SignedInNav = ({loggedIn, setloggedIn}) => {
                                 >
                                     Home
                                 </Nav.Link>
+
                                 <Nav.Link
-                                    href="#videos"
+                                    href="/feed"
                                     className="text-dark c-nav-link"
                                 >
                                     Videos
