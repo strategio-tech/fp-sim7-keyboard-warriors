@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import VideoRating from "../Components/VideoRating";
+import thumbnailImage from "../assets/thumbnail.jpg"
 
 const VideoFeed = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -114,7 +115,8 @@ const VideoFeed = () => {
         {allVideos.map((video) => {
           return (
             <div className="square">
-              <Link to={`/watch/${video.id.S}`}><img src="src/assets/thumbnail.jpg" style={{height:'20em'}} /></Link><br />
+              <Link to={`/watch/${video.id.S}`}><img src={thumbnailImage} style={{height:'20em'}} /></Link><br />
+
               <Link to={`/watch/${video.id.S}`}>Yoga Title</Link>
               <VideoRating></VideoRating>
               <p style={{marginBottom:'3rem'}}>
