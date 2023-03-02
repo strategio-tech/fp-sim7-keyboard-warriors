@@ -24,39 +24,45 @@ const VideoFeed = () => {
 
 //   console.log(allVideos)
   return (
-    <div>
+    <div style={{background:'#EDFEFF', display:'flex', alignItems:'center', flexDirection:'column'}}>
       <h1>Videos</h1>
-      <button type="submit">
+      <button type="submit" style={{borderRadius:'60px', background:'#014E58', color:'#00FF19'}}>
         <Link to="/upload">Upload Videos</Link>
-      </button>
+      </button> <br />
       {/* <input type = "text">Search Bar</input> */}
       <input
+        style={{width:'600px'}}
         type="text"
         placeholder="Search here"
         onChange={handleSearch}
         value={searchInput}
       />
-      <div className="border border-info">
-        <span className="border border-info">
-          Difficulty:
-          <input type="radio" value="beginner" id="beginner" />
-          <label htmlFor="beginner">Beginner</label>
-          <input type="radio" value="intermediate" id="intermediate" />
-          <label htmlFor="intermediate">Intermediate</label>
-          <input type="radio" value="advanced" id="advanced" />
+      <div className="border-info" style={{ marginTop: "10px", display: "flex", alignItems:'center' }}>
+        <div style={{ marginRight: "20px" }}>
+          <span style={{ fontSize: "20px", marginRight: "5px" }}>Difficulty: </span>
+          <input type="radio" value="beginner" id="beginner" name="difficulty" style={{ marginRight: "3px" }}
+          />
+          <label htmlFor="beginner" style={{ marginRight: "10px" }}>Beginner</label>
+          <input type="radio" value="intermediate" id="intermediate" name="difficulty" style={{ marginRight: "3px" }}/>
+          <label htmlFor="intermediate" style={{ marginRight: "10px" }}>Intermediate</label>
+          <input type="radio" value="advanced" id="advanced" name="difficulty" style={{ marginRight: "3px" }}
+          />
           <label htmlFor="advanced">Advanced</label>
-        </span>
-        Category:
-        <select>
-          <option value="ashtanga">Ashtanga</option>
-          <option value="hatha">Hatha</option>
-          <option value="hot">Hot</option>
-          <option value="iyengar">Iyengar</option>
-          <option value="kundalini">Kundalini</option>
-          <option value="power">Power</option>
-          <option value="restorative">Restorative</option>
-          <option value="vinyasa">Vinyasa</option>
-        </select>
+        </div>
+
+        <div style={{height:'42px'}}>
+          <span style={{ fontSize: "20px", marginRight: "9px"}}>Category:</span>
+          <select style={{ marginTop: "10px" }}>
+            <option value="ashtanga">Ashtanga</option>
+            <option value="hatha">Hatha</option>
+            <option value="hot">Hot</option>
+            <option value="iyengar">Iyengar</option>
+            <option value="kundalini">Kundalini</option>
+            <option value="power">Power</option>
+            <option value="restorative">Restorative</option>
+            <option value="vinyasa">Vinyasa</option>
+          </select>
+        </div>
       </div>
 
       <div className ="d-flex flex-column">
@@ -64,12 +70,13 @@ const VideoFeed = () => {
         {/* <VideoPage id = {id}></VideoPage> */}
         
         {/* {allVideos} */}
-{    allVideos.map((video) =>{
-       return <Link to={`/watch/${video.id.S}`}>Test Link</Link>
+        {    
+                allVideos.map((video) =>{
+              return <Link to={`/watch/${video.id.S}`}>Test Link</Link>
 
-        // console.log()
-      })
-}
+                // console.log()
+              })
+        }
       </div>
     </div>
   );
