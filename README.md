@@ -123,7 +123,8 @@ Open your web browser and navigate to the link on your terminal to access the ap
 <div id="backend-repo">
 
 ## Back-End Repository
-See our back-end repo [here](https://github.com/UmiKami/serenitystream-backend).
+See our back-end repo [here](https://github.com/UmiKami/serenitystream-backend).  
+Documentation: https://api.serenitystream.tv/api/v2/docs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
@@ -175,7 +176,7 @@ To set up your own CI/CD pipeline, you will need to follow these general steps:
 <div id="upcoming features" >
 
 ## Upcoming Features:
- - Customaize User profile page 
+ - Customize User profile page 
  - Video browsing and searching by difficulty, category, or title
  - Personalized playlist creation
  - Rating and commenting on videos

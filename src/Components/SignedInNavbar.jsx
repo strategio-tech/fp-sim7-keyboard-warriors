@@ -19,7 +19,7 @@ const SignedInNav = ({loggedIn, setloggedIn}) => {
         <div>
             <Navbar style={{ backgroundColor: "#EDFEFF" }} variant="dark">
                 <Container className="px-3">
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/home">
                         <Link to={"/home"}> 
                             <img
                             src={serenity}
@@ -130,7 +130,7 @@ const SignedInNav = ({loggedIn, setloggedIn}) => {
                                     variant="dark"
                                 >
                                     <Container className="px-3">
-                                        <Navbar.Brand href="#home">
+                                        <Navbar.Brand href="/home">
                                             {/* <img 
                             src={serenity}
                             height="70"

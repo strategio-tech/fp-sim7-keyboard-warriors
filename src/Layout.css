@@ -20,6 +20,17 @@ body,html{
 
 }
 
+.comment-field{
+  resize: none;
+  border: 1px solid #014E58;
+  color: #014E58;
+  font-weight: 500;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
 .c-nav-link{
   color: #014E58 !important;
   text-decoration: none !important;

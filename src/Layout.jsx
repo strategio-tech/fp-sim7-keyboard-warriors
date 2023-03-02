@@ -23,7 +23,7 @@ const Layout = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/feed" element={<VideoFeed />} />
-                <Route path="/watch/:id" element={<VideoPage />} />
+                <Route path="/watch/:id" element={<VideoPage setloggedIn={setloggedIn} />} />
                 <Route path="/profile" element={<UserProfile />} />
                 <Route path="/upload" element={<VideoUpload setloggedIn={setloggedIn} />} />
             </Routes>
