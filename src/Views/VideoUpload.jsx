@@ -55,8 +55,8 @@ function VideoUpload({setloggedIn}) {
         });
     }
         return (
-        <div  className="d-flex justify-content-center align-items-start"
-        style={{ background: '#EDFEFF', height: "100vh",font:'Raleway' }}>
+            <div className=" flex-column justify-content-center align-items-start"
+            style={{ background: '#EDFEFF', height: "100vh",font:'Raleway' }}>
     
             <form className="flex-column col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-start" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="chooseFile" >
