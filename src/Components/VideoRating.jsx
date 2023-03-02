@@ -63,6 +63,9 @@ const VideoRating = ({ id }) => {
           setValue(newValue);
           setFlag(true);
         }}
+        onChangeActive={(event, newHover) => {
+            setHover(newHover);
+          }}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
       />
       {value !== null && (
