@@ -24,7 +24,8 @@ const VideoFeed = () => {
 
 //   console.log(allVideos)
   return (
-    <div style={{background:'#EDFEFF', display:'flex', alignItems:'center', flexDirection:'column'}}>
+    <div className=" flex-column justify-content-start align-items-center"
+    style={{background:'#EDFEFF', display:'flex', height: "100vh", alignItems:'center'}}>
       <h1>Videos</h1>
 
       <button type="submit" style={{borderRadius:'60px', background:'#014E58'}}>

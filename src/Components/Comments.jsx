@@ -5,8 +5,8 @@ const Comments = ({user, comment}) => {
 
 
   return (
-    <div className='square border border-danger'>
-      <p>{user}</p>
+    <div className='square border'>
+      <h4>{user}</h4>
       <p>{comment}</p>
     </div>
   )
