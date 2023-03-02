@@ -175,7 +175,7 @@ To set up your own CI/CD pipeline, you will need to follow these general steps:
 <div id="upcoming features" >
 
 ## Upcoming Features:
- - Customaize User profile page 
+ - Customize User profile page 
  - Video browsing and searching by difficulty, category, or title
  - Personalized playlist creation
  - Rating and commenting on videos
