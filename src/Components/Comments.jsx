@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const Comments = ({user, comment}) => {
-
-
-
+const Comments = ({ user, comment }) => {
   return (
-    <div className='square border'>
+    <div className="square border">
       <h4>{user}</h4>
       <p>{comment}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Comments
+export default Comments;
