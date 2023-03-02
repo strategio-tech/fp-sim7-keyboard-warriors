@@ -101,6 +101,9 @@ const VideoPage = () => {
           frameborder="0"
           allowFullScreen
         />
+        
+        
+        <div className="col-12 d-flex gap-4 justify-content-start align-items-start">
         <VideoRating id={id}></VideoRating>
         <span>
           <button type="submit" style={{ borderRadius: "60px",
@@ -194,6 +197,7 @@ const VideoPage = () => {
           );
         })}
       </div>
+    </div>
     </div>
   );
 };
