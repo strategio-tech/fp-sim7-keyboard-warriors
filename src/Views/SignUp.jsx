@@ -91,9 +91,13 @@ const SignUp = () => {
                     closeButton
                     style={{ backgroundColor: "#014E58" }}
                 >
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title style={{ color: "#EDFEFF" }}>
+                        Verify account
+                    </Modal.Title>
                 </Modal.Header>
-                <Modal.Body style={{ backgroundColor: "#014E58" }}>
+                <Modal.Body
+                    style={{ backgroundColor: "#014E58", color: "#EDFEFF" }}
+                >
                     Enter the one-time code we sent to your email
                     <input
                         value={code}
@@ -142,9 +146,9 @@ const SignUp = () => {
                     zIndex: "-500",
                 }}
             /> */}
-            <div className="col-12 d-flex flex-column align-items-center" >
+            <div className="col-12 d-flex flex-column align-items-center">
                 <h1
-                  className="text-center py-4"
+                    className="text-center py-4"
                     style={{
                         color: "#014E58",
                         fontFamily: "Raleway",
