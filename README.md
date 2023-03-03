@@ -140,11 +140,6 @@ Documentation: https://api.serenitystream.tv/api/v2/docs
 
 ![Back-End Pipeline](/src/assets/Back-End-Pipeline.png)
 
-To set up your own CI/CD pipeline, you will need to follow these general steps:
-
-....
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
 
