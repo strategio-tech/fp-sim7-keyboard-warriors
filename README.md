@@ -124,8 +124,7 @@ Open your web browser and navigate to the link on your terminal to access the ap
 
 ## Back-End Repository
 See our back-end repo [here](https://github.com/UmiKami/serenitystream-backend).  
-Documentation: https://api.serenitystream.tv/api/v2/docs
-
+	
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
 
@@ -147,24 +146,8 @@ Documentation: https://api.serenitystream.tv/api/v2/docs
 <div id="end-points">
 
 ## End Points 
-...
+Documentation: https://api.serenitystream.tv/api/v2/docs
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-</div>
-
-<div id="get-request">
-
-## Get Requests 
-
-...
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-</div>
-
-<div id="post-request">
-
-## Post Requests  
-
-...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
 
@@ -174,8 +157,8 @@ Documentation: https://api.serenitystream.tv/api/v2/docs
  - Customize User profile page 
  - Video browsing and searching by difficulty, category, or title
  - Personalized playlist creation
- - Rating and commenting on videos
  - Live streaming
+ - Delete comments
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
