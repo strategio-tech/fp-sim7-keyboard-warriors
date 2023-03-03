@@ -6,6 +6,11 @@ body,html{
   padding:0;
 
 }
+
+body{
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
