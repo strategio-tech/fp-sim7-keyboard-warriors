@@ -55,10 +55,10 @@ function VideoUpload({setloggedIn}) {
         });
     }
         return (
-            <div className=" flex-column justify-content-around align-items-center"
+            <div className=" d-flex justify-content-center align-items-start"
             style={{ background: '#EDFEFF', height: "100vh",font:'Raleway', alignItems: "center" }}>
     
-            <form className="flex-column col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-start" onSubmit={handleSubmit(onSubmit)}>
+            <form className="flex-column col-12 col-sm-10 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-start" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="chooseFile" >
             <img className="flex-column justify-content-around align-items-start" src={lplogo} alt="" width="100%" height="100%"/>
             </label> 
