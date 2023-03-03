@@ -18,8 +18,6 @@
     <li><a href="#backend-repo">Back-End Repository</a></li> 
     <li><a href="#web-deployment">Web Deployment</a></li> 
     <li><a href="#end-points">End Points</a></li> 
-    <li><a href="#get-request">Get Requests</a></li> 
-    <li><a href="#post-request">Post Requests</a></li>
     <li><a href="#upcoming-features">Upcoming Features</a></li> 
 	<li><a href="#authors">Authors</a></li>
   </ol>
