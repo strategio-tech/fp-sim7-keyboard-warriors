@@ -55,8 +55,8 @@ function VideoUpload({setloggedIn}) {
         });
     }
         return (
-            <div className=" flex-column justify-content-center align-items-start"
-            style={{ background: '#EDFEFF', height: "100vh",font:'Raleway' }}>
+            <div className=" flex-column justify-content-around align-items-center"
+            style={{ background: '#EDFEFF', height: "100vh",font:'Raleway', alignItems: "center" }}>
     
             <form className="flex-column col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-start" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="chooseFile" >
@@ -92,7 +92,7 @@ function VideoUpload({setloggedIn}) {
             </span>
 
             <h5>Category</h5>
-            <select style={{background: '#EDFEFF'}}>
+            <select style={{background: '#EDFEFF', width: "50%"}}>
                 <option value="ashtanga">Ashtanga yoga (eight-limbed yoga)</option>
                 <option value="hatha">Hatha yoga (force yoga)</option>
                 <option value="hot">Hot yoga (hot room yoga)</option>

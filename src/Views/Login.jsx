@@ -40,9 +40,10 @@ const Login = () => {
 
     const formStyle = {
         textAlign: "center",
-        minHeight: "700px",
+        minHeight: "600px",
         borderRadius: "5px",
         boxSizing: "border-box",
+        padding: '3%',
         backgroundColor: "#014E58",
         display: "flex",
         flexDirection: "column",
@@ -51,7 +52,7 @@ const Login = () => {
     return (
         <div
             className="d-flex justify-content-center align-items-center"
-            style={{ maxHeight: "100vh" }}
+            style={{ backgroundSize: 'cover',height: "100vh" }}
         >
             <img
                 src={backimage}
@@ -61,8 +62,7 @@ const Login = () => {
                     maxHeight: "100%",
                     minWidth: "100%",
                     opacity: " 0.55 ",
-                    position: "absolute",
-                    top: 0,
+                    position: "absolute",                    
                     zIndex: "-500",
                 }}
             />
@@ -71,7 +71,10 @@ const Login = () => {
                 <h1
                     className="text-center py-4"
                     style={{
+                        textAlign: 'center',
+                        padding: '3%',
                         color: "#014E58",
+                        top: '58px',
                         fontFamily: "Raleway",
                         fontWeight: "700",
                         fontSize: "48px",

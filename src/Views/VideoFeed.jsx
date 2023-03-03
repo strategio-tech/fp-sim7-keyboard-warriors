@@ -27,8 +27,11 @@ const VideoFeed = () => {
       style={{
         background: "#EDFEFF",
         display: "flex",
-        height: "100vh",
-        alignItems: "center",
+        height: "100%",
+        alignItems: "center",   
+        width: "100%"             
+         
+
       }}
     >
       <h1>Videos</h1>
@@ -51,7 +54,7 @@ const VideoFeed = () => {
       </button>{" "}
       <br />
       <input
-        style={{ width: "600px" }}
+        style={{ width: "50%" }}
         type="text"
         placeholder="Search here"
         onChange={handleSearch}
@@ -61,40 +64,16 @@ const VideoFeed = () => {
         className="border-info"
         style={{ marginTop: "10px", display: "flex", alignItems: "center", marginBottom: "1rem" }}>
       
-        <div style={{ marginRight: "20px" }}>
-          <span style={{ fontSize: "20px", marginRight: "5px" }}>
-            Difficulty:{" "}
-          </span>
-          <input
-            type="radio"
-            value="beginner"
-            id="beginner"
-            name="difficulty"
-            style={{ marginRight: "3px" }}
-          />
-          <label htmlFor="beginner" style={{ marginRight: "10px" }}>
-            Beginner
-          </label>
-          <input
-            type="radio"
-            value="intermediate"
-            id="intermediate"
-            name="difficulty"
-            style={{ marginRight: "3px" }}
-          />
-          <label htmlFor="intermediate" style={{ marginRight: "10px" }}>
-            Intermediate
-          </label>
-          <input
-            type="radio"
-            value="advanced"
-            id="advanced"
-            name="difficulty"
-            style={{ marginRight: "3px" }}
-          />
-          <label htmlFor="advanced">Advanced</label>
-        </div>
-
+      <span >
+                <h5>Difficulty</h5>
+                <input type="radio" value="beginner" id="beginner" name="difficulty" />
+                <label htmlFor="beginner">&nbsp;Beginner &nbsp;&nbsp;</label> 
+                <input type="radio"  value="intermediate" id="intermediate" name="difficulty"/>
+                <label htmlFor="intermediate">&nbsp;Intermediate &nbsp;&nbsp;</label>
+                <input type="radio"  value="advanced" id="advanced" name="difficulty"/>
+                <label htmlFor="advanced">&nbsp;Advanced&nbsp;&nbsp;</label>
+            </span>
+            </div>
         <div style={{ height: "42px" }}>
           <span style={{ fontSize: "20px", marginRight: "9px" }}>
             Category:
@@ -110,8 +89,8 @@ const VideoFeed = () => {
             <option value="vinyasa">Vinyasa</option>
           </select>
         </div>
-      </div>
-      <div className="d-flex flex-column">
+      
+      <div className="d-flex flex-column justify-content-center align-items-center">
         {allVideos.map((video) => {
           return (
             <div className="square">
