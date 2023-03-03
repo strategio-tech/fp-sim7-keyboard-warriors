@@ -94,7 +94,7 @@ const VideoFeed = () => {
         {allVideos.map((video) => {
           return (
             <div className="square">
-              <Link to={`/watch/${video.id.S}`}><img src={thumbnailImage} style={{height:'20em'}} /></Link><br />
+              <Link to={`/watch/${video.id.S}`}><img className="col-12 col-sm-8 justify-content-around align-items-center" src={thumbnailImage} alt="" style={{height:'20em'}} /></Link><br />
 
               <Link to={`/watch/${video.id.S}`}>Yoga Title</Link>
               <VideoRating></VideoRating>
