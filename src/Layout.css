@@ -130,3 +130,12 @@ color: #05260A;
   background-color: #014E58 !important;
   color: white !important;
 }
+
+
+.img-container{
+  background-image: url("./assets/background.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

@@ -74,7 +74,6 @@ const SignUp = () => {
     };
     const formStyle = {
         textAlign: "center",
-        minHeight: "700px",
         borderRadius: "5px",
         boxSizing: "border-box",
         backgroundColor: "#014E58",
@@ -84,7 +83,7 @@ const SignUp = () => {
 
     return (
         <div
-            className="d-flex justify-content-center align-items-center"
+            className="d-flex justify-content-center align-items-center img-container"
             style={{ maxHeight: "100vh" }}
         >
             <Modal show={afterCode} onHide={() => setAfterCode(false)}>
@@ -130,7 +129,7 @@ const SignUp = () => {
                 </Modal.Footer>
             </Modal>
 
-            <img
+            {/* <img
                 src={backimage}
                 alt=""
                 style={{
@@ -142,8 +141,8 @@ const SignUp = () => {
                     top: 0,
                     zIndex: "-500",
                 }}
-            />
-            <div className="col-12 d-flex flex-column align-items-center">
+            /> */}
+            <div className="col-12 d-flex flex-column align-items-center" >
                 <h1
                   className="text-center py-4"
                     style={{
@@ -157,14 +156,14 @@ const SignUp = () => {
                 </h1>
 
                 <form
-                    className="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-around align-items-center"
+                    className="col-12 col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex gap-5 justify-content-around align-items-center"
                     onSubmit={handleSubmit}
                     style={formStyle}
                 >
                     <input
                         value={name}
                         name="name"
-                        className="gen-input"
+                        className="gen-input mt-4"
                         onChange={(e) => setName(e.target.value)}
                         id="name"
                         placeholder="Full Name"
@@ -212,6 +211,7 @@ const SignUp = () => {
                                 fontWeight: "bold",
                                 display: "block",
                             }}
+                            className="mb-4"
                         >
                             Submit
                         </Button>
