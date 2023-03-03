@@ -138,4 +138,9 @@ color: #05260A;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    overflow-x: hidden;
+}
+
+.auth-title{
+  background: #014e58ae;
 }

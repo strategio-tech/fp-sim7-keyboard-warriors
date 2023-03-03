@@ -148,9 +148,9 @@ const SignUp = () => {
             /> */}
             <div className="col-12 d-flex flex-column align-items-center">
                 <h1
-                    className="text-center py-4"
+                    className="text-center py-4 auth-title"
                     style={{
-                        color: "#014E58",
+                        color: "#EDFEFF",
                         fontFamily: "Raleway",
                         fontWeight: "700",
                         fontSize: "48px",

@@ -51,30 +51,17 @@ const Login = () => {
 
     return (
         <div
-            className="d-flex justify-content-center align-items-center"
-            style={{ backgroundSize: 'cover',height: "100vh" }}
+            className="d-flex justify-content-center align-items-center img-container "
+            style={{ backgroundSize: "cover", height: "100vh" }}
         >
-            <img
-                src={backimage}
-                alt=""
-                style={{
-                    objectFit: "cover",
-                    maxHeight: "100%",
-                    minWidth: "100%",
-                    opacity: " 0.55 ",
-                    position: "absolute",                    
-                    zIndex: "-500",
-                }}
-            />
-
             <div className="col-12 d-flex flex-column align-items-center">
                 <h1
-                    className="text-center py-4"
+                    className="text-center py-4 auth-title"
                     style={{
-                        textAlign: 'center',
-                        padding: '3%',
-                        color: "#014E58",
-                        top: '58px',
+                        textAlign: "center",
+                        padding: "3%",
+                        color: "#EDFEFF",
+                        top: "58px",
                         fontFamily: "Raleway",
                         fontWeight: "700",
                         fontSize: "48px",
