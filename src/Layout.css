@@ -125,3 +125,8 @@ color: #05260A;
   text-align: center;
 
 }
+
+.basic-navbar-toggle{
+  background-color: #014E58 !important;
+  color: white !important;
+}

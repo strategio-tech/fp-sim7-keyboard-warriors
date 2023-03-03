@@ -16,16 +16,22 @@ const Layout = () => {
    
     return (
         <BrowserRouter>
-            <SignedInNav loggedIn={loggedIn} setloggedIn={setloggedIn}/>
+            <SignedInNav loggedIn={loggedIn} setloggedIn={setloggedIn} />
             <Routes>
                 <Route index element={<LandingPage />} />
                 <Route path="/home" element={<LandingPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/feed" element={<VideoFeed />} />
-                <Route path="/watch/:id" element={<VideoPage setloggedIn={setloggedIn} />} />
+                <Route
+                    path="/watch/:id"
+                    element={<VideoPage setloggedIn={setloggedIn} />}
+                />
                 <Route path="/profile" element={<UserProfile />} />
-                <Route path="/upload" element={<VideoUpload setloggedIn={setloggedIn} />} />
+                <Route
+                    path="/upload"
+                    element={<VideoUpload setloggedIn={setloggedIn} />}
+                />
             </Routes>
         </BrowserRouter>
     );
