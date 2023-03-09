@@ -5,7 +5,7 @@ import serenity from "../assets/logowithbackground.png";
 import profileImage from "../assets/Luuh.jpg";
 import addVideoImage from "../assets/addVideo.png";
 
-const SignedInNav = ({loggedIn, setloggedIn}) => {
+const SignedInNav = ({loggedIn, setloggedIn, forwardRef}) => {
     useEffect(() => {
         if (localStorage.getItem("token")) {
             setloggedIn(true);
@@ -21,6 +21,7 @@ const SignedInNav = ({loggedIn, setloggedIn}) => {
             className="col-12"
             variant="dark"
             expand="sm"
+            ref={forwardRef}
         >
             <Container className="px-3">
                 <Navbar.Brand href="/home">

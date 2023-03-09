@@ -7,18 +7,20 @@ import VideoFeed from "./Views/VideoFeed"
 import UserProfile from "./Views/UserProfile";
 import VideoPage from "./Views/VideoPage";
 import './Layout.css';
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import VideoUpload from "./Views/VideoUpload"
+import GlobalMessage from "./Views/GlobalMessage";
 
 const Layout = () => {
     const [loggedIn, setloggedIn] = useState(false);
-
+    const ref = useRef(null)
+    
    
     return (
         <BrowserRouter>
-            <SignedInNav loggedIn={loggedIn} setloggedIn={setloggedIn} />
+            <SignedInNav loggedIn={loggedIn} setloggedIn={setloggedIn} forwardRef={ref}/>
             <Routes>
-                <Route index element={<LandingPage />} />
+                <Route index element={<GlobalMessage forwardRef={ref}/>} />
                 <Route path="/home" element={<LandingPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
