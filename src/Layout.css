@@ -1,0 +1,151 @@
+/* *{
+  outline: 1px solid red;
+} */
+body,html{
+  margin: 0;
+  padding:0;
+
+}
+
+body{
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}
+
+.comment-field{
+  resize: none;
+  border: 1px solid #014E58;
+  color: #014E58;
+  font-weight: 500;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.c-nav-link{
+  color: #014E58 !important;
+  text-decoration: none !important;
+}
+.c-nav-link-hero{
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0px 1px 2px #0468A0;
+}
+
+.auth-form-container, .register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+  .auth-form-container {
+    align-items: center;
+    padding: 30rem;
+    border-radius: 10px;
+    position: absolute;
+ 
+
+  }
+  
+  .auth-form-container::before {
+    content: "";
+    background-image: url("./assets/background.jpg");
+    background-size:cover;
+    margin: 0;
+    padding: 0;
+    background-position:center center;
+    position:absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.55
+
+  }
+
+  h2 {
+    position: absolute;
+    width: 219px;
+    height: 75px;
+    top: 158px;
+    text-align: center;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    color: #014E58;
+
+  }
+
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+.gen-input {
+  text-align: center;
+  align-self: center;
+  /* margin: auto; */
+  padding: 1rem;
+  border: none;
+  background: #EDFEFF;
+  border-radius: 10px;
+
+}
+
+input[type="radio"]{
+    margin-top:0;
+}
+
+.log-in-btn{
+font-weight: bold;
+margin: auto;
+display: block;
+padding: 24px 48px;
+background: #EDFEFF;
+border-radius: 60px;
+color: #05260A;
+}
+
+.link-next{
+ 
+  text-align: center;
+
+}
+
+.basic-navbar-toggle{
+  background-color: #014E58 !important;
+  color: white !important;
+}
+
+
+.img-container{
+  background-image: url("./assets/background.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.auth-title{
+  background: #014e58ae;
+}
